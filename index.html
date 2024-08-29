@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- No permite que funcionen los onclick
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="renderer.js"></script>
+
+    <title>Electron App</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/gallery_logo.png"></img>
+        <h2>Galería</h2>
+    </header>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
+        <button class="tablinks" onclick="openTab(event, 'Gallery')">Gallery</button>
+        <button class="tablinks" onclick="openTab(event, 'Add')">Add</button>
+        <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+    </div>
+
+    <div id="Home" class="tabcontent">
+        <h3>Home</h3>
+        <p>Welcome to the home page!</p>
+    </div>
+
+    <div id="Gallery" class="tabcontent">
+        <h3>Gallery</h3>
+        <p>Here is the gallery.</p>
+    </div>
+
+    <div id="Add" class="tabcontent">
+        <h3>Añadir directorio</h3>
+        <input type="file" id="directoryInput" webkitdirectory>
+        <p id="directoryPath"></p>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        <p>Contact us at contact@example.com.</p>
+    </div>
+
+
+</body>
+
+</html>

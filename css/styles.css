@@ -1,0 +1,63 @@
+:root {
+    --white: #f0f0f0;
+    --black: #121927;
+    --grey: #c7c3bc;
+    --gradient: linear-gradient(90deg, var(--white), var(--black));
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+header {
+    display: flex;
+    height: 75px;
+    padding: 0 20px;
+
+    background: var(--gradient);
+    align-items: center;
+    gap: 20px;
+    color: var(--second-color);
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header > img {
+    height: 50%;
+}
+
+/* Estilos para las pestañas */
+.tab {
+    margin-top: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: var(--grey);
+}
+
+/* Estilos para el contenido de las pestañas */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
